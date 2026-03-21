@@ -1,6 +1,6 @@
 # Homebrew Tap for AruNi-01
 
-Install Atmos with Homebrew:
+Install the Atmos desktop app with Homebrew:
 
 ```bash
 brew install --cask AruNi-01/tap/atmos

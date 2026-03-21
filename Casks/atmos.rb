@@ -1,9 +1,9 @@
 cask "atmos" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.2.0,0.1.5"
-  sha256 arm:   "b12527225d5c87c5b50ee25c6a526015aac24ffe2297157b71901b570bde388f",
-         intel: "58b69fa2752b77757857a0b602d7deedcbc38504d7209f69c0504851d048f16f"
+  version "0.2.4,0.2.4"
+  sha256 arm:   "75b51276dbd42fa2402d2fe55e6af3b665bb47c8916e71b70d4b86eb736a80d3",
+         intel: "2ed2d53227e0d3c92dfa11bcd6305dbe6d3fa4310e38c18fd42ffd27e8e4ea05"
 
   url "https://github.com/AruNi-01/atmos/releases/download/desktop-v#{version.csv.first}/Atmos_#{version.csv.second}_#{arch}.dmg",
       verified: "github.com/AruNi-01/atmos/"
