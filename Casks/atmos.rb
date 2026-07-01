@@ -1,11 +1,11 @@
 cask "atmos" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2.0.0,2.0.0"
-  sha256 arm:   "731ad82f42419b40e59e843f033dbfddc28a48fd7635f7915ddeb5eee4e8c3fc",
-         intel: "d5adf9611b40e867c6de8281568f93eb8c69439f85f9caab0bfb93226ec4f33b"
+  version "2026.7.2,2026.7.2"
+  sha256 arm:   "80c85b8b4e279fbcb92ea7623a99b1a94d5a6c913db2d31c28f407472a58fe05",
+         intel: "c1ec59c55e2f4bc8b9b4a479de3a5a662356ef16ba71163b32653479802cff62"
 
-  url "https://github.com/AruNi-01/atmos/releases/download/desktop-v#{version.csv.first}/Atmos_#{version.csv.second}_#{arch}.dmg",
+  url "https://github.com/AruNi-01/atmos/releases/download/desktop-#{version.csv.first}/Atmos_#{version.csv.second}_#{arch}.dmg",
       verified: "github.com/AruNi-01/atmos/"
   name "Atmos"
   desc "Atmosphere for Agentic Builders"
@@ -14,7 +14,7 @@ cask "atmos" do
   livecheck do
     url :url
     strategy :github_latest do |json, _regex|
-      match = json["tag_name"]&.match(/^desktop-v(\d+(?:\.\d+)+(?:[-.a-zA-Z0-9]+)?)$/)
+      match = json["tag_name"]&.match(/^desktop-(\d{4}\.\d{1,2}\.\d{1,2}(?:[-.a-zA-Z0-9]+)?)$/)
       next if match.blank?
 
       version = match[1]
